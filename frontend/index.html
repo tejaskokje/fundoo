@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    }
+    label {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    }
+  </style>
+  <body>
+    <div class='center'>
+      <h1 class='center'>Rundoo Catalog System</h1>
+      <br>
+      <h2>Add a Product</h2>
+      <br>
+      <form id='addForm'>
+        <label><b>SKU:</b></label>
+        <input type='text' id='sku' name='sku'><br><br>
+        <label><b>Name:</b></label>
+        <input type='text' id='name' name='name'><br><br>
+        <label><b>Category:</b></label>
+        <input type='text' id='category' name='category'><br><br><br>
+        <input id='postSubmit' type='submit' value='Add Product'>
+      </form>
+      <br>
+      <div id='status'></div>
+      <script>
+        const thisForm = document.getElementById('addForm');
+        thisForm.addEventListener('submit', async function (e) {
+        const status = document.getElementById('status');
+        status.innerHTML = '';
+        e.preventDefault();
+        const formData = new FormData(thisForm).entries()
+          const response = await fetch('http://0.0.0.0:8080/rundoo/product.Catalog/Create', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify(Object.fromEntries(formData))
+          });
+        
+        const result = await response.json();
+        if (!response.ok) {
+         status.innerHTML = '<b>Error: ' + result.msg + '</b>';
+        } else {
+         status.innerHTML = '<b>Product added successfully</b>';
+        }
+        
+        });   
+      </script>
+      <br><b></b>
+      <h2>Search a Product using SKU, Name or Category</h2>
+      <br>
+      <form id='searchForm'>
+        <input type='text' id='query' name='query'><br><br><br>
+        <input id='postSubmit' type='submit' value='Search'>
+      </form>
+      <p id='searchResults'></p>
+      <div id='searchResultsTable' class='center'></div>
+      <script>
+        const searchForm = document.getElementById('searchForm');
+        searchForm.addEventListener('submit', async function (e) {
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+        var searchResultsTableDiv = document.getElementById('searchResultsTable');
+        searchResultsTableDiv.innerHTML = '';
+        var query = document.getElementById('query').value;
+        e.preventDefault();
+        const searchFormData = new FormData(searchForm).entries();
+          const response = await fetch('http://0.0.0.0:8080/rundoo/product.Catalog/Search', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify(Object.fromEntries(searchFormData))
+          });
+        
+        const json = await response.json();
+        if (!response.ok) {
+         searchResults.innerHTML = '<b>Error: ' + json.msg + '</b>';
+        } else {
+         searchResults.innerHTML = 'Search results for <b><i>' +  query + '</i></b>';
+         var table = document.createElement('TABLE');
+         table.border = '1';
+         table.style.marginLeft = 'auto';
+         table.style.marginRight = 'auto';
+        
+         var tableBody = document.createElement('TBODY');
+         table.appendChild(tableBody);
+         var tr = document.createElement('TR');
+         tableBody.appendChild(tr);
+         for (const field of ['SKU', 'NAME', 'CATEGORY']) {
+             var td = document.createElement('TD');
+             td.width = '75';
+             var b = document.createElement('b')
+             b.appendChild(document.createTextNode(field))
+             td.appendChild(b);
+             tr.appendChild(td);
+         }
+        
+         for(var i = 0; i < json.result.length; i++) {
+           var obj = json.result[i];
+           var tr = document.createElement('TR');
+           tableBody.appendChild(tr);
+           for (const field of [obj.sku, obj.name, obj.category]) {
+             var td = document.createElement('TD');
+             td.width = '75';
+             td.appendChild(document.createTextNode(field));
+             tr.appendChild(td);
+           }
+        
+           searchResultsTableDiv.appendChild(table);      
+         }
+        }
+        });
+      </script>
+    </div>
+  </body>

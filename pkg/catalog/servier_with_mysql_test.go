@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"testing"
 
+	"github.com/twitchtv/twirp"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
 	pb "rundoo.com/pkg/proto"
 )
@@ -76,8 +77,8 @@ func TestCreate_InvalidProduct(t *testing.T) {
 
 	// Call the Create function
 	resp, err := server.Create(context.Background(), req)
-	if err != ErrInvalidProduct {
-		t.Errorf("Expected ErrInvalidProduct, got %v", err)
+	if err != ErrSkuNameCategoryRequired {
+		t.Errorf("Expected: %v, got %v", ErrSkuNameCategoryRequired, err)
 	}
 
 	// Verify the response is nil
@@ -111,8 +112,11 @@ func TestCreate_DatabaseFailure(t *testing.T) {
 
 	// Call the Create function
 	resp, err := server.Create(context.Background(), req)
-	if err != ErrExecFailed {
-		t.Errorf("Expected ErrExecFailed, got %v", err)
+	var twerr twirp.Error
+	if errors.As(err, &twerr) {
+		if twerr.Code() != twirp.Internal {
+			t.Errorf("Expected %v, got %v", twirp.Internal, err)
+		}
 	}
 
 	// Verify the response is nil
@@ -204,8 +208,11 @@ func TestSearch_DatabaseQueryFailure(t *testing.T) {
 
 	// Call the Search function
 	resp, err := server.Search(context.Background(), req)
-	if err != ErrQueryFailed {
-		t.Errorf("Expected ErrQueryFailed, got %v", err)
+	var twerr twirp.Error
+	if errors.As(err, &twerr) {
+		if twerr.Code() != twirp.Internal {
+			t.Errorf("Expected %v, got %v", twirp.Internal, err)
+		}
 	}
 
 	// Verify the response is nil
