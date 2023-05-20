@@ -1,0 +1,30 @@
+syntax = "proto3";
+package product;
+option go_package = "pkg/proto";
+
+service Catalog {
+  rpc Create(CreateReq) returns (CreateResp);
+  rpc Search(SearchReq) returns (SearchResp);
+}
+
+message CreateReq {
+  string name = 1;
+  string category = 2;
+  string sku = 3;
+}
+
+message CreateResp {}
+
+message Product {
+  string name = 1;
+  string category = 2;
+  string sku = 3;
+}
+
+message SearchReq {
+  string query = 1;
+}
+
+message SearchResp {
+  repeated Product result = 1;
+}
