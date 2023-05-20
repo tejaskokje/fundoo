@@ -47,7 +47,9 @@ Database configuration should be provided to the service using environment varia
 - `DB_LOCATION`: This is the hostname or IP address of the server that hosts `MySQL`. Optional port number can be appended after a `:` if using non default MySQL port. For example, `DB_LOCATION` can have value `backend.kokje.me:3306`.
 - `DB_NAME`: This is the database name that will be used by the Catalog service.
 
-Below are the SQL commands used to create the database. It is also highly recommended to create indexes on various columns for efficient searching.
+You will have to create a table called `catalog` with `SKU` as the primary key. It is also highly recommended to create indexes on various columns for efficient searching.
+
+Below are the SQL commands used to create the database. 
 
 ```
 CREATE TABLE catalog ( SKU varchar(12) NOT NULL, Name varchar(255) NOT NULL, Category varchar(255) NOT NULL PRIMARY KEY (SKU));
