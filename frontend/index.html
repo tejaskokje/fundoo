@@ -33,10 +33,9 @@
       <br>
       <div id='status'></div>
       <script>
-        const apiServer = document.getElementById('apiserver').value
-        alert(apiServer)
         const thisForm = document.getElementById('addForm');
         thisForm.addEventListener('submit', async function (e) {
+        const apiServer = document.getElementById('apiserver').value;
         const status = document.getElementById('status');
         status.innerHTML = '';
         e.preventDefault();
@@ -69,6 +68,7 @@
       <script>
         const searchForm = document.getElementById('searchForm');
         searchForm.addEventListener('submit', async function (e) {
+        const apiServer = document.getElementById('apiserver').value;
         const searchResults = document.getElementById('searchResults');
         searchResults.innerHTML = '';
         var searchResultsTableDiv = document.getElementById('searchResultsTable');
