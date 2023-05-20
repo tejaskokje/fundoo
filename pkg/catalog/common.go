@@ -11,5 +11,5 @@ var (
 	ErrSearchQueryRequired     = twirp.InvalidArgument.Error("search query required")
 	ErrNoResultFound           = twirp.NotFoundError("no result found")
 	ErrInvalidProduct          = errors.New("invalid product")
-	ErrProductAlreadyExists    = twirp.AlreadyExists.Error("product already exists")
+	ErrProductAlreadyExists    = twirp.AlreadyExists.Error("product sku already exists")
 )
