@@ -13,7 +13,7 @@ You can try a demo version of this service at https://rundoo.kokje.me
 
 This service currently provides two endpoints
 
-- *_/rundoo/product.Catalog/Create_* Endpoint: The `Create` endpoint allows creation of a record for a given product into the catalog service. The endpoint uses `POST` method to get inputs for this record. Below is an example of how you can invoke this endpoint using `curl` utility.
+- **_/rundoo/product.Catalog/Create_** Endpoint: The `Create` endpoint allows creation of a record for a given product into the catalog service. The endpoint uses `POST` method to get inputs for this record. Below is an example of how you can invoke this endpoint using `curl` utility.
 
 ```
 curl --request POST --url https://backend.kokje.me/rundoo/product.Catalog/Create --header 'Content-Type: application/json' --data '{
@@ -25,10 +25,11 @@ curl --request POST --url https://backend.kokje.me/rundoo/product.Catalog/Create
 
 **If the `SKU` already exist, this endpoint will return an error.**
 
-- *_/rundoo/product.Catalog/Search_*  Endpoint: The `Search` endpoint allows for searching the catalog using any arbitrary search term. It searches across all attributes of a given product (`SKU`, `Name` & `Category`). This endpoint usese `POST` method to get the search term.
+- **_/rundoo/product.Catalog/Search_**  Endpoint: The `Search` endpoint allows for searching the catalog using any arbitrary search term. It searches across all attributes of a given product (`SKU`, `Name` & `Category`). This endpoint usese `POST` method to get the search term.
 Below is an example of how you can invoke this endpoint using `curl` utility.
 
-```curl --request POST --url https://backend.kokje.me/rundoo/product.Catalog/Search --header 'Content-Type: application/json' --data '{
+```
+curl --request POST --url https://backend.kokje.me/rundoo/product.Catalog/Search --header 'Content-Type: application/json' --data '{
     "query": "foo"
 }'
 ```
