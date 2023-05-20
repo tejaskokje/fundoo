@@ -18,7 +18,7 @@
       <h1 class='center'>Rundoo Catalog System</h1>
       <br>
       <label for='apiserver'><b>API Server:</b></label>
-      <input type='text' id='apiserver' name='apiserver' value='https://rundoo.kokje.me:8080'>
+      <input type='text' id='apiserver' name='apiserver' value='https://backend.kokje.me'>
       <h2>Add a Product</h2>
       <br>
       <form id='addForm'>
@@ -100,8 +100,8 @@
          for (const field of ['SKU', 'NAME', 'CATEGORY']) {
              var td = document.createElement('TD');
              td.width = '75';
-             var b = document.createElement('b')
-             b.appendChild(document.createTextNode(field))
+             var b = document.createElement('b');
+             b.appendChild(document.createTextNode(field));
              td.appendChild(b);
              tr.appendChild(td);
          }
