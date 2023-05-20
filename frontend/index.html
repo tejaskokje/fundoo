@@ -17,6 +17,8 @@
     <div class='center'>
       <h1 class='center'>Rundoo Catalog System</h1>
       <br>
+      <label for='apiserver'><b>API Server:</b></label>
+      <input type='text' id='apiserver' name='apiserver' value='https://rundoo.kokje.me'>
       <h2>Add a Product</h2>
       <br>
       <form id='addForm'>
@@ -31,13 +33,16 @@
       <br>
       <div id='status'></div>
       <script>
+        const apiServer = document.getElementById('apiserver').value
+        alert(apiServer)
         const thisForm = document.getElementById('addForm');
         thisForm.addEventListener('submit', async function (e) {
         const status = document.getElementById('status');
         status.innerHTML = '';
         e.preventDefault();
         const formData = new FormData(thisForm).entries()
-          const response = await fetch('http://0.0.0.0:8080/rundoo/product.Catalog/Create', {
+          var url = apiServer + '/rundoo/product.Catalog/Create';
+          const response = await fetch(url, {
            method: 'POST',
            headers: { 'Content-Type': 'application/json' },
            body: JSON.stringify(Object.fromEntries(formData))
@@ -71,7 +76,8 @@
         var query = document.getElementById('query').value;
         e.preventDefault();
         const searchFormData = new FormData(searchForm).entries();
-          const response = await fetch('http://0.0.0.0:8080/rundoo/product.Catalog/Search', {
+          var url = apiServer + '/rundoo/product.Catalog/Search';
+          const response = await fetch(url, {
            method: 'POST',
            headers: { 'Content-Type': 'application/json' },
            body: JSON.stringify(Object.fromEntries(searchFormData))
