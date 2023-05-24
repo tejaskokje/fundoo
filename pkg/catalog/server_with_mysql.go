@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"log"
 
+	pb "fundoo.com/pkg/proto"
 	my "github.com/go-mysql/errors"
 	"github.com/twitchtv/twirp"
-	pb "rundoo.com/pkg/proto"
 )
 
 // Options struct takes various options for creating

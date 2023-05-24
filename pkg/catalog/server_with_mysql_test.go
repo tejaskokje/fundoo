@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"testing"
 
+	pb "fundoo.com/pkg/proto"
 	"github.com/twitchtv/twirp"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
-	pb "rundoo.com/pkg/proto"
 )
 
 var (

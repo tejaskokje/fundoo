@@ -15,7 +15,7 @@
   </style>
   <body>
     <div class='center'>
-      <h1 class='center'>Rundoo Catalog System</h1>
+      <h1 class='center'>fundoo Catalog System</h1>
       <br>
       <label for='apiserver'><b>API Server:</b></label>
       <input type='text' id='apiserver' name='apiserver' value='https://backend.kokje.me'>
@@ -40,7 +40,7 @@
         status.innerHTML = '';
         e.preventDefault();
         const formData = new FormData(thisForm).entries()
-          var url = apiServer + '/rundoo/product.Catalog/Create';
+          var url = apiServer + '/fundoo/product.Catalog/Create';
           const response = await fetch(url, {
            method: 'POST',
            headers: { 'Content-Type': 'application/json' },
@@ -76,7 +76,7 @@
         var query = document.getElementById('query').value;
         e.preventDefault();
         const searchFormData = new FormData(searchForm).entries();
-          var url = apiServer + '/rundoo/product.Catalog/Search';
+          var url = apiServer + '/fundoo/product.Catalog/Search';
           const response = await fetch(url, {
            method: 'POST',
            headers: { 'Content-Type': 'application/json' },

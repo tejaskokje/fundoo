@@ -1,4 +1,4 @@
-module rundoo.com
+module fundoo.com
 
 go 1.20
 

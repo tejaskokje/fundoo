@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.30.0
 // 	protoc        v3.21.12
-// source: pkg/proto/rundoo.proto
+// source: pkg/proto/fundoo.proto
 
 package proto
 
@@ -33,7 +33,7 @@ type CreateReq struct {
 func (x *CreateReq) Reset() {
 	*x = CreateReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_proto_rundoo_proto_msgTypes[0]
+		mi := &file_pkg_proto_fundoo_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -46,7 +46,7 @@ func (x *CreateReq) String() string {
 func (*CreateReq) ProtoMessage() {}
 
 func (x *CreateReq) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_rundoo_proto_msgTypes[0]
+	mi := &file_pkg_proto_fundoo_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *CreateReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateReq.ProtoReflect.Descriptor instead.
 func (*CreateReq) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_rundoo_proto_rawDescGZIP(), []int{0}
+	return file_pkg_proto_fundoo_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CreateReq) GetName() string {
@@ -92,7 +92,7 @@ type CreateResp struct {
 func (x *CreateResp) Reset() {
 	*x = CreateResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_proto_rundoo_proto_msgTypes[1]
+		mi := &file_pkg_proto_fundoo_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -105,7 +105,7 @@ func (x *CreateResp) String() string {
 func (*CreateResp) ProtoMessage() {}
 
 func (x *CreateResp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_rundoo_proto_msgTypes[1]
+	mi := &file_pkg_proto_fundoo_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -118,7 +118,7 @@ func (x *CreateResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateResp.ProtoReflect.Descriptor instead.
 func (*CreateResp) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_rundoo_proto_rawDescGZIP(), []int{1}
+	return file_pkg_proto_fundoo_proto_rawDescGZIP(), []int{1}
 }
 
 type Product struct {
@@ -134,7 +134,7 @@ type Product struct {
 func (x *Product) Reset() {
 	*x = Product{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_proto_rundoo_proto_msgTypes[2]
+		mi := &file_pkg_proto_fundoo_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -147,7 +147,7 @@ func (x *Product) String() string {
 func (*Product) ProtoMessage() {}
 
 func (x *Product) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_rundoo_proto_msgTypes[2]
+	mi := &file_pkg_proto_fundoo_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,7 +160,7 @@ func (x *Product) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Product.ProtoReflect.Descriptor instead.
 func (*Product) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_rundoo_proto_rawDescGZIP(), []int{2}
+	return file_pkg_proto_fundoo_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Product) GetName() string {
@@ -195,7 +195,7 @@ type SearchReq struct {
 func (x *SearchReq) Reset() {
 	*x = SearchReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_proto_rundoo_proto_msgTypes[3]
+		mi := &file_pkg_proto_fundoo_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -208,7 +208,7 @@ func (x *SearchReq) String() string {
 func (*SearchReq) ProtoMessage() {}
 
 func (x *SearchReq) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_rundoo_proto_msgTypes[3]
+	mi := &file_pkg_proto_fundoo_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -221,7 +221,7 @@ func (x *SearchReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchReq.ProtoReflect.Descriptor instead.
 func (*SearchReq) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_rundoo_proto_rawDescGZIP(), []int{3}
+	return file_pkg_proto_fundoo_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *SearchReq) GetQuery() string {
@@ -242,7 +242,7 @@ type SearchResp struct {
 func (x *SearchResp) Reset() {
 	*x = SearchResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_proto_rundoo_proto_msgTypes[4]
+		mi := &file_pkg_proto_fundoo_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -255,7 +255,7 @@ func (x *SearchResp) String() string {
 func (*SearchResp) ProtoMessage() {}
 
 func (x *SearchResp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_rundoo_proto_msgTypes[4]
+	mi := &file_pkg_proto_fundoo_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -268,7 +268,7 @@ func (x *SearchResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchResp.ProtoReflect.Descriptor instead.
 func (*SearchResp) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_rundoo_proto_rawDescGZIP(), []int{4}
+	return file_pkg_proto_fundoo_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *SearchResp) GetResult() []*Product {
@@ -278,9 +278,9 @@ func (x *SearchResp) GetResult() []*Product {
 	return nil
 }
 
-var File_pkg_proto_rundoo_proto protoreflect.FileDescriptor
+var File_pkg_proto_fundoo_proto protoreflect.FileDescriptor
 
-var file_pkg_proto_rundoo_proto_rawDesc = []byte{
+var file_pkg_proto_fundoo_proto_rawDesc = []byte{
 	0x0a, 0x16, 0x70, 0x6b, 0x67, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x72, 0x75, 0x6e, 0x64,
 	0x6f, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x07, 0x70, 0x72, 0x6f, 0x64, 0x75, 0x63,
 	0x74, 0x22, 0x4d, 0x0a, 0x09, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x12, 0x12,
@@ -311,26 +311,26 @@ var file_pkg_proto_rundoo_proto_rawDesc = []byte{
 }
 
 var (
-	file_pkg_proto_rundoo_proto_rawDescOnce sync.Once
-	file_pkg_proto_rundoo_proto_rawDescData = file_pkg_proto_rundoo_proto_rawDesc
+	file_pkg_proto_fundoo_proto_rawDescOnce sync.Once
+	file_pkg_proto_fundoo_proto_rawDescData = file_pkg_proto_fundoo_proto_rawDesc
 )
 
-func file_pkg_proto_rundoo_proto_rawDescGZIP() []byte {
-	file_pkg_proto_rundoo_proto_rawDescOnce.Do(func() {
-		file_pkg_proto_rundoo_proto_rawDescData = protoimpl.X.CompressGZIP(file_pkg_proto_rundoo_proto_rawDescData)
+func file_pkg_proto_fundoo_proto_rawDescGZIP() []byte {
+	file_pkg_proto_fundoo_proto_rawDescOnce.Do(func() {
+		file_pkg_proto_fundoo_proto_rawDescData = protoimpl.X.CompressGZIP(file_pkg_proto_fundoo_proto_rawDescData)
 	})
-	return file_pkg_proto_rundoo_proto_rawDescData
+	return file_pkg_proto_fundoo_proto_rawDescData
 }
 
-var file_pkg_proto_rundoo_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_pkg_proto_rundoo_proto_goTypes = []interface{}{
+var file_pkg_proto_fundoo_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_pkg_proto_fundoo_proto_goTypes = []interface{}{
 	(*CreateReq)(nil),  // 0: product.CreateReq
 	(*CreateResp)(nil), // 1: product.CreateResp
 	(*Product)(nil),    // 2: product.Product
 	(*SearchReq)(nil),  // 3: product.SearchReq
 	(*SearchResp)(nil), // 4: product.SearchResp
 }
-var file_pkg_proto_rundoo_proto_depIdxs = []int32{
+var file_pkg_proto_fundoo_proto_depIdxs = []int32{
 	2, // 0: product.SearchResp.result:type_name -> product.Product
 	0, // 1: product.Catalog.Create:input_type -> product.CreateReq
 	3, // 2: product.Catalog.Search:input_type -> product.SearchReq
@@ -343,13 +343,13 @@ var file_pkg_proto_rundoo_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_pkg_proto_rundoo_proto_init() }
-func file_pkg_proto_rundoo_proto_init() {
-	if File_pkg_proto_rundoo_proto != nil {
+func init() { file_pkg_proto_fundoo_proto_init() }
+func file_pkg_proto_fundoo_proto_init() {
+	if File_pkg_proto_fundoo_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_pkg_proto_rundoo_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_proto_fundoo_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateReq); i {
 			case 0:
 				return &v.state
@@ -361,7 +361,7 @@ func file_pkg_proto_rundoo_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_proto_rundoo_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_proto_fundoo_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateResp); i {
 			case 0:
 				return &v.state
@@ -373,7 +373,7 @@ func file_pkg_proto_rundoo_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_proto_rundoo_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_proto_fundoo_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Product); i {
 			case 0:
 				return &v.state
@@ -385,7 +385,7 @@ func file_pkg_proto_rundoo_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_proto_rundoo_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_proto_fundoo_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SearchReq); i {
 			case 0:
 				return &v.state
@@ -397,7 +397,7 @@ func file_pkg_proto_rundoo_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_proto_rundoo_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_proto_fundoo_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SearchResp); i {
 			case 0:
 				return &v.state
@@ -414,18 +414,18 @@ func file_pkg_proto_rundoo_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_pkg_proto_rundoo_proto_rawDesc,
+			RawDescriptor: file_pkg_proto_fundoo_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pkg_proto_rundoo_proto_goTypes,
-		DependencyIndexes: file_pkg_proto_rundoo_proto_depIdxs,
-		MessageInfos:      file_pkg_proto_rundoo_proto_msgTypes,
+		GoTypes:           file_pkg_proto_fundoo_proto_goTypes,
+		DependencyIndexes: file_pkg_proto_fundoo_proto_depIdxs,
+		MessageInfos:      file_pkg_proto_fundoo_proto_msgTypes,
 	}.Build()
-	File_pkg_proto_rundoo_proto = out.File
-	file_pkg_proto_rundoo_proto_rawDesc = nil
-	file_pkg_proto_rundoo_proto_goTypes = nil
-	file_pkg_proto_rundoo_proto_depIdxs = nil
+	File_pkg_proto_fundoo_proto = out.File
+	file_pkg_proto_fundoo_proto_rawDesc = nil
+	file_pkg_proto_fundoo_proto_goTypes = nil
+	file_pkg_proto_fundoo_proto_depIdxs = nil
 }

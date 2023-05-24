@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
+	"fundoo.com/pkg/catalog"
+	pb "fundoo.com/pkg/proto"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/rs/cors"
 	"github.com/twitchtv/twirp"
-	"rundoo.com/pkg/catalog"
-	pb "rundoo.com/pkg/proto"
 )
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
 
 	// create a new server
 	twirpServer := pb.NewCatalogServer(server,
-		twirp.WithServerPathPrefix("/rundoo"))
+		twirp.WithServerPathPrefix("/fundoo"))
 
 	// make a CORS wrapper:
 	corsWrapper := cors.New(cors.Options{
